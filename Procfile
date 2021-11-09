@@ -1,0 +1,1 @@
+web: gunicorn c2.wsgi

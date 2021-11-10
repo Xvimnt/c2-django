@@ -44,46 +44,40 @@
         * Base structure
         */
 
+        .inner {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+
         html,
         body {
-        height: 100%;
-        background-color: #333;
+            background-color: #333;
         }
 
         body {
-        display: -ms-flexbox;
-        display: -webkit-box;
-        display: flex;
-        -ms-flex-pack: center;
-        -webkit-box-pack: center;
-        justify-content: center;
-        color: #fff;
-        text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-        box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+            color: #fff;
+            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
         }
-
-        .cover-container {
-        max-width: 42em;
-        }
-
 
         /*
         * Header
         */
         .masthead {
-        margin-bottom: 2rem;
+            margin-bottom: 2rem;
         }
 
         .masthead-brand {
-        margin-bottom: 0;
+            margin-bottom: 0;
         }
 
         .nav-masthead .nav-link {
-        padding: .25rem 0;
-        font-weight: 700;
-        color: rgba(255, 255, 255, .5);
-        background-color: transparent;
-        border-bottom: .25rem solid transparent;
+            padding: .25rem 0;
+            font-weight: 700;
+            color: rgba(255, 255, 255, .5);
+            background-color: transparent;
+            border-bottom: .25rem solid transparent;
         }
 
         .nav-masthead .nav-link:hover,
@@ -111,18 +105,6 @@
 
 
         /*
-        * Cover
-        */
-        .cover {
-        padding: 0 1.5rem;
-        }
-        .cover .btn-lg {
-        padding: .75rem 1.25rem;
-        font-weight: 700;
-        }
-
-
-        /*
         * Footer
         */
         .mastfoot {
@@ -131,30 +113,26 @@
     </style>
   </head>
 
-  <body class="text-center">
+  <body>
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <div class="d-flex h-100 p-3 flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
           <h3 class="masthead-brand mx-2">OLC2</h3>
           <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link" href="javascript:void(0)">Home</a>
-            <a class="nav-link" href="javascript:void(0)">Features</a>
-            <a class="nav-link" href="javascript:void(0)">Contact</a>
+            <a class="nav-link" href="javascript:void(0)" onclick="home()">Compilar</a>
+            <a class="nav-link" href="javascript:void(0)">Traducir</a>
+            <a class="nav-link" href="javascript:void(0)">Reportes</a>
           </nav>
         </div>
       </header>
 
-      <main role="main" class="inner cover">
-        
         <div class="container">
             {% block content %}
             {% endblock %}
         </div>
 
-      </main>
-
-      <footer class="mastfoot mt-auto">
+      <footer class="mastfoot mt-auto text-center">
         <div class="inner">
           <p><a href="https://xvimnt.github.io/">Javier Monterroso</a> 2021 &copy;</p>
         </div>
@@ -162,4 +140,9 @@
     </div>
 
   </body>
+    <script>
+        function home() {
+            alert("hello")
+        }
+    </script>
 </html>
